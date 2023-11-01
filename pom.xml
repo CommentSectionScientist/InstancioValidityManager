@@ -17,7 +17,7 @@
         <dependency>
             <groupId>org.instancio</groupId>
             <artifactId>instancio-junit</artifactId>
-            <version>3.4.1</version>
+            <version>3.4.2-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -34,4 +34,10 @@
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>oss-snapshot-repository</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
 </project>

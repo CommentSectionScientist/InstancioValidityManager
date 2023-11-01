@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class EntityTest {
     @Test
-    void validityManagerIsInitializedAndIgnoredByInstancio(){
+    void validityManagerIsInitializedAndIgnoredByInstancio() {
         Entity entity = Instancio.of(Entity.class)
                 .ignore(Select.field(AbstractEntityData.class, "validityManager"))
                 .create();
@@ -16,9 +16,8 @@ public class EntityTest {
                 .isNotNull();
     }
     @Test
-    void failsBecauseAnnotationFieldIsNull(){
-        Entity entity = Instancio.of(Entity.class)
-                                 .create();
+    void failsBecauseAnnotationFieldIsNull() {
+        Entity entity = Instancio.create(Entity.class);
         Assertions.assertThat(entity)
                   .extracting(Entity::getDate)
                   .isNotNull();
